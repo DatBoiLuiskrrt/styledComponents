@@ -98,7 +98,7 @@ function Header () {
         
           <NavLeft>
             <Insta>
-            Instagram
+            <strong>Instagram</strong>
             </Insta>
             
             
