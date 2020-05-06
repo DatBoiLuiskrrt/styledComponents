@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from "react";
-import Axios from "axios";
+import axios from "axios";
 
 
 
@@ -7,20 +7,24 @@ const BodyList = () => {
     const [item, setItem] = useState([]);
      
     useEffect( () => {
-        Axios
+        axios
         .get("")
         .then(response => {
-            return ( data => {
-                setItem( data.response);
+            setItem( response.data);
             }
-            )
-        })
+            
+        )
         .catch( error => {
             console.log( "No data returned ", error);
         })
     },[]);
     return (
         <>
+        {item.map( data => {
+            return (
+                <Body  data={data}/>
+            )
+        })}
         </>
     );
 };
