@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Button } from "reactstrap";
 
 const Nav = styled.div`
   background-color: #fff;
@@ -12,14 +13,35 @@ const NavHeader = styled.div`
   display: flex;
   align-items: center;
   margin: 0 auto;
+  @media( max-width: 500px ) {
+    direction: flex;
+    flex-direction: column;
+    justify-content: center;
+    // border: 1px solid black;
+    
+  }
 `
 const NavLeft = styled.div`
   width: 33.333%;
   text-align: left;
+  @media( max-width: 500px ) {
+      direction: flex;
+      width: 100vw;
+     
+    }
+  
+`
+const Insta = styled.div`
+    display:flex;
+    justify-content: center;
+    
 `
 const NavCenter = styled.div`
   width: 33.333%;
   text-align: center;
+  @media( max-width: 900px ) {
+    display: none;
+  }
 `
 const Input = styled.input`
   font-size: 16px;
@@ -45,16 +67,23 @@ const NavRight = styled.div`
   svg {
     margin-right: 20px;
   }
+  @media( max-width: 900px ) {
+    display: flex;
+    flex-direction: column;
+    // border: 1px solid black;
+    width: 100vw;
+  }
 `
 const MenuLink = styled.a`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  @media( max-width: 500px ) {
+    flex-direction: column;
+    padding: 5px ;
+    
+  }
   
-`
-const Titulo = styled.p`
-  color: red;
-
 `
 const Alert = () => {
     return (
@@ -68,7 +97,11 @@ function Header () {
         <NavHeader>
         
           <NavLeft>
+            <Insta>
             Instagram
+            </Insta>
+            
+            
           </NavLeft>
   
           <NavCenter>
@@ -79,18 +112,11 @@ function Header () {
           <NavRight>
   
             <MenuLink href="#">
-                <Titulo>Hello </Titulo>
-                <button onClick={ () => { Alert()}}>Hello</button>
-              {/* <Compass /> */}
+                <Insta>Hola</Insta>
+                <Insta onClick={ () => { Alert()}}>Hello</Insta>
+                <Insta>Hi</Insta>
             </MenuLink>
   
-            <MenuLink href="#">
-              {/* <Explore /> */}
-            </MenuLink>
-  
-            <MenuLink href="#">
-              {/* <Avatar /> */}
-            </MenuLink>
             
           </NavRight>
   
