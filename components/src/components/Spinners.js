@@ -1,7 +1,8 @@
 import React from 'react';
 import { Spinner } from 'reactstrap';
 
-export const Sniper = (props) => {
+export const Spiral = (props) => {
+
   return (
     <div>
       <Spinner type="grow" color="primary" />
@@ -16,4 +17,4 @@ export const Sniper = (props) => {
   );
 }
 
-export default Sniper;
+export default Spiral;
