@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Button } from "reactstrap";
 
 const Nav = styled.div`
-  background-color: #fff;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   border-bottom: 1px solid rgba(0,0,0,.0975);
 `
 const NavHeader = styled.div`
