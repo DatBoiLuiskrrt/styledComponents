@@ -3,6 +3,7 @@ import Header from '../src/components/Header';
 import Body from "../src/components/Body";
 import Spirals from "../src/components/Spinners";
 import Toasties from "../src/components/Toast";
+import Alert from "../src/components/Alert";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
      <Spirals />
      <Spirals />
      <Toasties />
+     <Alert />
 
      
     </div>
